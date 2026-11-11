@@ -11,7 +11,7 @@ const ticketSteps = [
 const faqs = [
   { q: 'How much is a ticket?', a: 'A standard ticket costs ₦1,000 per person. The supplied OPay account details are on this page, but register first, then transfer using the verified account details.' },
   { q: 'Where do I send the transfer?', a: 'OPay — 8113712248 — Adepoju Mary Oluwummi. Tap the Copy account number button above. Register first and keep your bank receipt.' },
-  { q: 'How will I receive my ticket?', a: 'After an organiser verifies your transfer and approves your payment, your personal ticket will appear on this website. You can download it as a PDF. Email delivery is not required.' },
+  { q: 'How will I receive my ticket?', a: 'After an organiser verifies your transfer and approves your payment, your personal ticket will appear on this website. You can download it as a PDF. You do not need an email address.' },
   { q: 'When and where is the hangout?', a: 'The date, time and venue have not been announced yet. We’ll share them here once confirmed.' },
   { q: 'Does submitting payment details mean my ticket is approved?', a: 'No. Submitting your account holder name and bank name only creates a pending payment claim. An organiser must verify the actual bank credit before approving and generating your ticket.' },
   { q: 'Do I need a phone number?', a: 'Yes. Your full name and Nigerian mobile number are required for registration.' },
