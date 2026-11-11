@@ -8,5 +8,5 @@ export default async function handler(req,res){
  let b;try{b=typeof req.body==='string'?JSON.parse(req.body):req.body;if(!b||JSON.stringify(b).length>4096)throw Error();}catch{return res.status(400).json({error:'Invalid request.'});}
  const r=await gateway('recover',{reference:b.reference,email:b.email,phone:b.phone});
  if(r.status===200&&r.data.success)return res.status(200).json(r.data);
- return res.status(404).json({error:'Those booking details could not be verified. Check the reference, email and phone number.'});
+ return res.status(404).json({error:'Those booking details could not be verified. Check the booking reference and phone number.'});
 }
