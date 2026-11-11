@@ -1,0 +1,25 @@
+name: Unpack website source
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'praestans-github-upload.zip'
+      - '.github/workflows/extract-source.yml'
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Extract project files into repository root
+        run: |
+          unzip -o praestans-github-upload.zip -d .
+          rm praestans-github-upload.zip
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add Praestans website source files"
+          git push
