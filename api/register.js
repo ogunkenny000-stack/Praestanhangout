@@ -1,11 +1,11 @@
 import { validateRegistration, originMatches } from '../lib/registration-validation.js';
 import { gateway, getClientIp } from '../lib/gateway.js';
 const message = {
-  DUPLICATE: 'This email is already registered. Contact the organisers if you lost your private reference.',
+  DUPLICATE: 'This phone number is already registered. Contact the organisers if you lost your private reference.',
   CLOSED: 'Registration is temporarily closed.',
   FULL: 'Registration is at capacity.',
   RATE_LIMIT: 'Too many attempts. Please wait an hour and try again.',
-  INVALID: 'Please check your full name, email, and phone number.',
+  INVALID: 'Please check your full name and Nigerian phone number.',
 };
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
